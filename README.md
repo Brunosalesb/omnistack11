@@ -1,5 +1,8 @@
-OmniStack11
-projeto da semana omniStack 11 da rocketseat
+OmniStack11 - Be The Hero
+
+Stack - NodeJs, React, React-Native
+
+aqui você irá encontrar um resumo do que foi feito em cada dia que foi disponibilizado o conteúdo pela rocketseat, Aproveite!
 
 ----------------------------------------------------------------dia 1 -----------------------------------------------------------------
 
@@ -20,3 +23,49 @@ projeto da semana omniStack 11 da rocketseat
 -criar projeto React usando "npx create-react-app frontend"
 
 -rodar projeto usando "npm start"
+
+----------------------------------------------------------------dia 2 -----------------------------------------------------------------
+
+-Download do Insomnia, para simular os métodos HTTP(parecido com o Postman)
+
+-instalação do "Nodemon" para monitorar o código usando "npm install nodemon -D"(-D para ser uma dependência de desenvolvimento)
+
+-adição do nodemon no script do arquivo package.json, rodar usando "npm + nome do script"
+
+-instalação do queryBuilder "Knexjs" usando "npm install knex" para conexão com banco
+
+-instalação do "SqlLite" usando "npm install sqlite3"
+
+-execução do pacote do knex com "npx knex init" (vai criar arquivo "knexfile.js")
+
+-criação pasta src, colocar as rotas em um arquivo separado
+
+-criação da pasta database
+
+-criação da pasta migration na pasta database, criação do diretorio na migration no knexfile.js com destino onde vão ficar as migrations
+
+-criação migration do knex usando "npx knex migrate:make + "nome da migration""
+
+-execução da migration usando "npx knex migrate:latest"
+
+-criação pasta controllers na pasta src (importação dos controllers no routes.js para usar os endpoints)
+
+-instalação do cors usando "npm install cors" para determinar quem acessa nossa aplicação
+
+----------------------------------------------------------------dia 3 -----------------------------------------------------------------
+
+-remoção arquivos desnecessários (readme, app.css, app.test.js, index.css, logo.svg, serviceWorker.js, setupTests.js, robots.txt, manifest,json, logos)
+
+-Criação pasta assets
+
+-criação component para Login
+
+-criação arquivo globalcss para estilização
+
+-instalação pacote ícones usando "npm install react-icons"
+
+-instalação do React-Router-Dom usando 'npm install react-router-dom'
+
+-criação arquivo routes.js
+
+-instalação de um cliente http(axios) usando "npm install axios"

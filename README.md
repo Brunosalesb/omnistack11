@@ -51,3 +51,21 @@ aqui você irá encontrar um resumo do que foi feito em cada dia que foi disponi
 -criação pasta controllers na pasta src (importação dos controllers no routes.js para usar os endpoints)
 
 -instalação do cors usando "npm install cors" para determinar quem acessa nossa aplicação
+
+----------------------------------------------------------------dia 3 -----------------------------------------------------------------
+
+-remoção arquivos desnecessários (readme, app.css, app.test.js, index.css, logo.svg, serviceWorker.js, setupTests.js, robots.txt, manifest,json, logos)
+
+-Criação pasta assets
+
+-criação component para Login
+
+-criação arquivo globalcss para estilização
+
+-instalação pacote ícones usando "npm install react-icons"
+
+-instalação do React-Router-Dom usando 'npm install react-router-dom'
+
+-criação arquivo routes.js
+
+-instalação de um cliente http(axios) usando "npm install axios"

@@ -2,7 +2,7 @@ OmniStack11 - Be The Hero
 
 Stack - NodeJs, React, React-Native
 
-aqui você irá encontrar um resumo do que foi feito em cada dia que foi disponibilizado o conteúdo pela rocketseat, Aproveite!
+aqui você irá encontrar um resumo do que foi feito dia-a-dia durante a semana OmniStack da RocketSeat!
 
 ----------------------------------------------------------------dia 1 -----------------------------------------------------------------
 

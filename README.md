@@ -93,3 +93,21 @@ aqui você irá encontrar um resumo do que foi feito dia-a-dia durante a semana 
 -instalação do axios usando "npm install axios"
 
 -instalação do intl usando "npm install intl"
+
+----------------------------------------------------------------dia 5 -----------------------------------------------------------------
+
+-instalação biblioteca celebrate para validações usando "npm install celebrate"
+
+-implementação de validações
+
+-instalação "npm install jest"
+
+-execução "npx jest --init"
+
+-execução dos testes unitários usando "npm test"
+
+-instalação "npm install cross-env"
+
+-criação de variável global para diferenciar ambiente de desenvolvimento e teste
+
+instalação "npm install supertest -D"

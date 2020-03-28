@@ -68,4 +68,28 @@ aqui você irá encontrar um resumo do que foi feito em cada dia que foi disponi
 
 -criação arquivo routes.js
 
--instalação de um cliente http(axios) usando "npm install axios"
+-instalação do axios usando "npm install axios"
+
+----------------------------------------------------------------dia 4 -----------------------------------------------------------------
+
+-instalação do expo usando "npm install -g expo-cli"
+
+-criação do projeto usando "expo init + nome"
+
+-execução do projeto usando "npm start"
+
+-instalação do app expo no celular, para escanear QR code(pode ser usado também um simulador na sua máquina)
+
+-instalação do react navigation usando "npm install @react-navigation/native"
+
+-instalação do react native gesture handler usando "expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view"
+
+-instalação do stack navigator usando "npm install @react-navigation/stack"
+
+-instalação do "expo install expo-constants"
+
+-instalação do "expo install expo-mail-composer" para enviar emails
+
+-instalação do axios usando "npm install axios"
+
+-instalação do intl usando "npm install intl"

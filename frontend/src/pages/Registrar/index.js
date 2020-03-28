@@ -1,38 +1,41 @@
+//#region IMPORTS
 import React, { useState } from 'react';
 import { Link, useHistory } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
-
 import api from "../../services/api";
-
 import './styles.css';
-
 import logoImg from '../../assets/logo.svg';
-
+//#endregion
 
 export default function Registrar() {
+
+    //#region CONST
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [whatsapp, setWhatsapp] = useState('');
     const [cidade, setCidade] = useState('');
     const [uf, setUf] = useState('');
-
     const history = useHistory();
+    //#endregion
 
+    //#region POST
     async function realizaRegistro(event) {
         event.preventDefault();
 
-        const data = {nome, email, whatsapp, cidade, uf};
+        const data = { nome, email, whatsapp, cidade, uf };
 
         try {
             const response = await api.post('ongs', data);
             alert(`seu ID de acesso: ${response.data.id}`);
-
             history.push('/')
+
         } catch (error) {
             alert('Erro no cadastro, tente novamente');
         }
     }
+    //#endregion
 
+    //#region HTML
     return (
         <div className="cadastro-container">
             <div className="content">
@@ -78,4 +81,5 @@ export default function Registrar() {
             </div>
         </div>
     );
+    //#endregion
 }

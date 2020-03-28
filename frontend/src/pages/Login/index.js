@@ -1,33 +1,37 @@
+//#region IMPORTS
 import React, { useState } from 'react';
 import { Link, useHistory } from "react-router-dom";
 import { FiLogIn } from 'react-icons/fi';
-
-import api from "../../services/api";
-
 import './styles.css';
-
+import api from "../../services/api";
 import heroesImg from '../../assets/heroes.png';
 import logoImg from '../../assets/logo.svg';
+//#endregion
 
 export default function Login() {
+    
+    //#region CONST
     const [id, setId] = useState('');
     const history = useHistory();
+    //#endregion
 
+    //#region POST
     async function login(event) {
         event.preventDefault();
 
         try {
             const response = await api.post('login', { id });
-
             localStorage.setItem('ongId', id);
             localStorage.setItem('ongNome', response.data.nome);
             history.push('/perfil')
+
         } catch (error) {
             alert('Falha no login, tente novamente');
         }
-
     }
+    //#endregion
 
+    //#region HTML
     return (
         <div className="login-container">
             <section className="form">
@@ -53,4 +57,5 @@ export default function Login() {
             <img src={heroesImg} alt="heroes"></img>
         </div>
     );
+    //#endregion
 }

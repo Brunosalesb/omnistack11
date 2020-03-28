@@ -1,26 +1,30 @@
+//#region IMPORTS
 import React, { useEffect, useState } from "react";
 import { Feather } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { View, FlatList, Image, Text, TouchableOpacity } from "react-native";
-
 import api from "../../services/api";
-
 import logoImg from "../../assets/logo.png";
-
 import styles from "./styles";
+//#endregion
 
 export default function Casos() {
+
+    //#region CONST
     const [casos, setCasos] = useState([]);
     const [total, setTotal] = useState(0);
     const [page, setPage] = useState(1);
     const [loading, setLoading] = useState(false);
-
     const navigation = useNavigation();
+    //#endregion
 
+    //#region NAVIGATION
     function irParaDetalhes(caso) {
         navigation.navigate('Detalhes', { caso });
     }
+    //#endregion
 
+    //#region GET
     async function obterCasos() {
         if (loading) {
             return;
@@ -41,10 +45,15 @@ export default function Casos() {
         setPage(page + 1);
         setLoading(false);
     }
+    //#endregion
 
+    //#region USE EFFECT
     useEffect(() => {
         obterCasos();
     }, [])
+    //#endregion
+
+    //#region HTML
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -87,4 +96,5 @@ export default function Casos() {
             />
         </View>
     );
+    //#endregion
 }

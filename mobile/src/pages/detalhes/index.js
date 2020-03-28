@@ -1,24 +1,29 @@
+//#region IMPORTS
 import React from "react";
 import { Feather } from "@expo/vector-icons";
 import { View, Text, Image, TouchableOpacity, Linking } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import * as MailComposer from "expo-mail-composer";
 import logoImg from "../../assets/logo.png";
-
 import styles from "./styles";
-
+//#endregion
 
 export default function Detalhes() {
+    
+    //#region CONST
     const navigation = useNavigation();
     const route = useRoute();
-
     const caso = route.params.caso;
     const mensagem = `Olá ${caso.nome}, estou entrando em contato pois gostaria de ajudar no caso "${caso.titulo}" com o valor de ${Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(caso.valor)}`;
+    //#endregion
 
+    //#region NAVIGATION
     function irParaCasos() {
         navigation.goBack();
     }
+    //#endregion
 
+    //#region CONTACT
     function enviarEmail() {
         MailComposer.composeAsync({
             subject: `Herói do caso: ${caso.titulo}`,
@@ -30,7 +35,9 @@ export default function Detalhes() {
     function enviarWhatsapp() {
         Linking.openURL(`whatsapp://send?phone=${caso.whatsapp}&text=${mensagem}`);
     }
+    //#endregion
 
+    //#region HTML
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -70,4 +77,5 @@ export default function Detalhes() {
             </View>
         </View>
     );
+    //#endregion
 }

@@ -1,6 +1,10 @@
+//#region IMPORTS
 const connection = require('../database/connection');
+//#endregion
 
 module.exports = {
+    
+    //#region POST
     async create(request, response) {
         const { id } = request.body;
 
@@ -12,4 +16,5 @@ module.exports = {
 
         return response.json(ongConectada);
     }
+    //#endregion
 }

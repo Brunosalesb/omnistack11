@@ -1,21 +1,22 @@
+//#region IMPORTS
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from "react-router-dom";
 import { FiPower, FiTrash2 } from "react-icons/fi";
-
 import api from "../../services/api";
-
 import "./styles.css";
-
 import logoImg from '../../assets/logo.svg';
+//#endregion
 
 export default function Perfil() {
+
+    //#region CONST
     const [casos, setCasos] = useState([]);
     const history = useHistory();
-
     const ongId = localStorage.getItem('ongId');
     const ongNome = localStorage.getItem('ongNome');
+    //#endregion
 
-
+    //#region GET
     useEffect(() => {
         api.get('perfil', {
             headers: {
@@ -25,7 +26,9 @@ export default function Perfil() {
             setCasos(response.data)
         })
     }, [ongId]);
+    //#endregion
 
+    //#region DELETE
     async function deletarCaso(id) {
         try {
             await api.delete(`casos/${id}`, {
@@ -33,17 +36,22 @@ export default function Perfil() {
                     Authorization: ongId,
                 }
             });
-
             setCasos(casos.filter(caso => caso.id !== id));
+
         } catch (error) {
             alert('Erro ao deletar caso, tente novamente');
         }
     }
+    //#endregion
 
+    //#region LOGOUT
     function Logout() {
         localStorage.clear();
         history.push('/');
     }
+    //#endregion
+
+    //#region HTML
     return (
         <div className="perfil-container">
             <header>
@@ -78,4 +86,5 @@ export default function Perfil() {
             </ul>
         </div>
     );
+    //#endregion
 }

@@ -1,12 +1,11 @@
+//#region IMPORTS
 import React, {useState} from 'react';
 import './global.css';
-
 import Routes from './routes';
+//#endregion
 
-function App() {
+export default function App() {
   return (
     <Routes/>
   );
 }
-
-export default App;
